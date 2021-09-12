@@ -10,7 +10,7 @@ variable "bucket_name" {
 
 variable "env" {
   description = "The environment for this deployment"
-  type = string
+  type        = string
   validation {
     condition     = contains(["prod", "dev", "test"], var.env)
     error_message = "Allowed values for input_parameter are \"prod\", \"dev\", or \"test\"."
@@ -19,10 +19,10 @@ variable "env" {
 
 variable "route_53_zone" {
   description = "Zone name in Route 53"
-  type = string
+  type        = string
 }
 
 variable "cert_record" {
   description = "The ssl certificate for this record would be created"
-  type = string
+  type        = string
 }

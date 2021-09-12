@@ -4,7 +4,7 @@ resource "aws_acm_certificate" "cert" {
 
   tags = {
     Environment = var.env
-    Terraform = true
+    Terraform   = true
   }
 
   lifecycle {

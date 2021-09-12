@@ -23,7 +23,7 @@ POLICY
   tags = {
     "Terraform" : true
     "Category" : "WEB"
-    "Environment": var.env
+    "Environment" : var.env
   }
 
 }
