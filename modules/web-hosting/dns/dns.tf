@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_acm_certificate" "cert" {
   domain_name       = var.cert_record
   validation_method = "DNS"
@@ -33,6 +36,7 @@ resource "aws_route53_record" "record" {
   type            = each.value.type
   zone_id         = data.aws_route53_zone.zone.zone_id
 }
+
 
 resource "aws_acm_certificate_validation" "validation" {
   certificate_arn         = aws_acm_certificate.cert.arn

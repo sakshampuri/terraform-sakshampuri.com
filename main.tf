@@ -10,21 +10,23 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
-  region  = "ap-south-1"
+  region = "ap-south-1"
 }
 
-module "portfolio_host" {
-  source = "./modules/web-hosting"
+variable "domain" {
+  default = "dev.sakshampuri.com"
+}
 
-  bucket_name = "dev.sakshampuri.com"
+variable "www_domain" {
+  default = "www.dev.sakshampuri.com"
+}
 
-  domain_name = "dev.sakshampuri.com"
+variable "route_53_zone" {
+  default = "sakshampuri.com"
+}
 
-  route_53_zone = "sakshampuri.com"
-
-  cert_record = "*.sakshampuri.com"
-
-  env = "dev"
+variable "env" {
+  default = "dev"
 
 }
+
