@@ -4,6 +4,6 @@ output "certificate_arn" {
 }
 
 output "zone_id" {
-  value = data.aws_route53_zone.zone.id
+  value       = data.aws_route53_zone.zone.id
   description = "The zone id of the hosted zone that is supplied"
 }
