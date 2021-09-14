@@ -2,6 +2,7 @@ module "s3" {
   source      = "./modules/web-hosting/s3"
   bucket_name = "dev.sakshampuri.com"
   env         = var.env
+  oai_arn     = module.cloudfront.oai_arn
 }
 
 module "dns" {

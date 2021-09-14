@@ -7,3 +7,7 @@ output "bucket_regional_domain" {
   description = "The regional domain of s3 bucket pointing to root."
   value       = aws_s3_bucket.www.bucket_regional_domain_name
 }
+
+output "bucket_name" {
+  value = aws_s3_bucket.www.bucket
+}
