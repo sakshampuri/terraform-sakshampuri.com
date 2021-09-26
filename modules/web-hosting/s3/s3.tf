@@ -19,8 +19,14 @@ resource "aws_s3_bucket" "www" {
 }
 POLICY
 
+  force_destroy = true
+
   versioning {
     enabled = true
+  }
+
+  lifecycle {
+    prevent_destroy = false
   }
 
   tags = {
