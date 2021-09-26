@@ -2,8 +2,9 @@ provider "aws" {
   region = "us-east-1"
 }
 resource "aws_acm_certificate" "cert" {
-  domain_name       = var.cert_record
-  validation_method = "DNS"
+  domain_name               = var.cert_record
+  validation_method         = "DNS"
+  subject_alternative_names = var.alt_names
 
   tags = {
     Terraform = true
