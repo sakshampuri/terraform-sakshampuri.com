@@ -25,3 +25,12 @@ resource "aws_route53_record" "cf_to_s3-portfolio-dev" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_record" "www_CNAME" {
+  zone_id = var.zone_id_dev
+  name    = var.www_domain-portfolio-dev
+  type    = "CNAME"
+  ttl     = "60"
+  records = [var.domain-portfolio-dev]
+}
+

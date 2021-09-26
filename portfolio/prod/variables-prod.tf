@@ -12,10 +12,10 @@ variable "www_domain-portfolio-prod" {
 
 variable "zone_id_prod" {
   type        = string
-  description = "Route 53 zone id for dev domains. If using defaults, it should correspond to zone id containing *.sakshampuri.com"
+  description = "Route 53 zone id for dev domains. If using defaults, it should correspond to zone id containing sakshampuri.com"
 }
 
 variable "certificate_arn_prod" {
   type        = string
-  description = "Certificate ARN corresponding to domain of either dev.sakshampuri.com or *.sakshampuri.com"
+  description = "Certificate ARN corresponding to domain sakshampuri.com"
 }
