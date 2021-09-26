@@ -21,20 +21,3 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-variable "domain" {
-  default = "dev.sakshampuri.com"
-}
-
-variable "www_domain" {
-  default = "www.dev.sakshampuri.com"
-}
-
-variable "route_53_zone" {
-  default = "sakshampuri.com"
-}
-
-variable "env" {
-  default = "dev"
-
-}
-
