@@ -12,7 +12,7 @@ terraform {
     bucket         = "terraform-sakshampuri"
     key            = "sakshampuri.com/state/terraform.tfstate"
     region         = "ap-south-1"
-    dynamodb_table = "terraform-sakshampuri.com-state-lock"
+    dynamodb_table = "terraform-lock-sakshampuri"
   }
 
 }
