@@ -1,9 +1,14 @@
 name: CI/CD
 
 on:
-  branches:
-    - master
-    - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   PlanApply:
