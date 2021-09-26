@@ -6,8 +6,7 @@ resource "aws_acm_certificate" "cert" {
   validation_method = "DNS"
 
   tags = {
-    Environment = var.env
-    Terraform   = true
+    Terraform = true
   }
 
   lifecycle {

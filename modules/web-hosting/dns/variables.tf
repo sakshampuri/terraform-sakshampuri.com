@@ -8,7 +8,3 @@ variable "cert_record" {
   type        = string
 }
 
-variable "env" {
-  description = "Environment"
-  type        = string
-}

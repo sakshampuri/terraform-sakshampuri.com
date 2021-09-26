@@ -12,12 +12,18 @@ terraform {
     bucket         = "terraform-sakshampuri"
     key            = "sakshampuri.com/state/terraform.tfstate"
     region         = "ap-south-1"
-    dynamodb_table = "terraform-sakshampuri.com-state-lock"
+    dynamodb_table = "terraform-lock-sakshampuri"
   }
 
 }
 
 provider "aws" {
   region = "ap-south-1"
+}
+
+module "portfolio-dev" {
+  source              = "./portfolio/dev"
+  zone_id_dev         = module.dns-subdomains-sakshampuri.zone_id
+  certificate_arn_dev = module.dns-subdomains-sakshampuri.certificate_arn
 }
 
