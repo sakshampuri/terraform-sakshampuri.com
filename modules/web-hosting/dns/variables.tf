@@ -8,3 +8,8 @@ variable "cert_record" {
   type        = string
 }
 
+variable "alt_names" {
+  description = "Allternative names for the cert record"
+  type        = list(string)
+  default     = []
+}
