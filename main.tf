@@ -21,20 +21,9 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-variable "domain" {
-  default = "dev.sakshampuri.com"
-}
-
-variable "www_domain" {
-  default = "www.dev.sakshampuri.com"
-}
-
-variable "route_53_zone" {
-  default = "sakshampuri.com"
-}
-
-variable "env" {
-  default = "dev"
-
+module "portfolio-dev" {
+  source              = "./portfolio/dev"
+  zone_id_dev         = module.dns-subdomains-sakshampuri.zone_id
+  certificate_arn_dev = module.dns-subdomains-sakshampuri.certificate_arn
 }
 
