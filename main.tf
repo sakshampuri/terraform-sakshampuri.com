@@ -28,7 +28,7 @@ module "portfolio-dev" {
 }
 
 module "portfolio-prod" {
-  source              = "./portfolio/prod"
+  source               = "./portfolio/prod"
   zone_id_prod         = module.dns-sakshampuri.zone_id
   certificate_arn_prod = module.dns-sakshampuri.certificate_arn
 }
