@@ -9,9 +9,9 @@ terraform {
   required_version = ">= 0.14.9"
 
   backend "s3" {
-    bucket = "terraform-sakshampuri"
-    key    = "sakshampuri.com/state/terraform.tfstate"
-    region = "ap-south-1"
+    bucket         = "terraform-sakshampuri"
+    key            = "sakshampuri.com/state/terraform.tfstate"
+    region         = "ap-south-1"
     dynamodb_table = "terraform-sakshampuri.com-state-lock"
   }
 
